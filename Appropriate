@@ -1,0 +1,88 @@
+import pyautogui as pauto;
+import time;
+
+pauto.PAUSE = 0.3
+link="URL"
+
+#Entrar no site
+pauto.press("win")
+pauto.write("Edge")
+pauto.press("enter")
+pauto.write(link)
+pauto.press("enter")
+
+time.sleep(1)
+#Login
+pauto.press("tab")
+pauto.write("Nickname")
+pauto.press("tab")
+pauto.write("Password")
+pauto.press("enter")
+
+time.sleep(3)
+
+pauto.scroll (500)
+pauto.click(x=70, y=638)
+pauto.click(x=83, y=699)
+
+time.sleep(4)
+
+#Select company
+for _ in range(21):
+    pauto.press("tab")
+pauto.write("Porto")
+pauto.press("enter")
+
+#Search
+for _ in range(3):
+    pauto.press("tab")
+
+pauto.press("enter")
+
+#Select all and "Apropriação Massiva"
+pauto.click(x=329, y=502)
+pauto.click(x=1774, y=512)
+
+time.sleep(4)
+pauto.click(x=329, y=502)
+pauto.click(x=1774, y=512)
+
+#Appropriate
+for _ in range(4):
+    pauto.press("tab")
+pauto.press("enter")
+pauto.write("Company Name")
+for _ in range(5):
+    pauto.press("down")
+pauto.press("enter")
+pauto.press("f5")
+time.sleep(3)
+
+#Repeat with others Companys
+for _ in range(21):
+    pauto.press("tab")
+pauto.write("KSA")
+pauto.press("enter")
+
+for _ in range(3):
+    pauto.press("tab")
+
+pauto.press("enter")
+
+pauto.click(x=329, y=502)
+pauto.click(x=1774, y=512)
+
+time.sleep(4)
+pauto.click(x=329, y=502)
+pauto.click(x=1774, y=512)
+
+for _ in range(5):
+    pauto.press("tab")
+pauto.press("enter")
+pauto.write("MS300")
+pauto.press("down")
+pauto.press("enter")
+for _ in range(8):
+    pauto.press("tab")
+pauto.press("enter")
+pauto.press("f5")
